@@ -1,0 +1,142 @@
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.Properties.Resources.resources
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.GenerateResource.cache
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfoInputs.cache
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfo.cs
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.CoreCompileInputs.cache
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\blueTile.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\floor.jpg
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\grid.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke test.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shoot.wav
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun_emission.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\TextAtlas.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\tile.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\uv_grid.jpg
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\VainstainsIconHD.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.mtl
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.obj
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Resources\white.png
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\lighting.frag
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.frag
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.vert
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.frag
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.vert
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.deps.json
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.dll
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\ref\VainEngine.dll
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.pdb
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.dll
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\ref\VainEngine.dll
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.pdb
+C:\Users\dbasp\source\repos\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.AssemblyReference.cache
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.Properties.Resources.resources
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.GenerateResource.cache
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfoInputs.cache
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfo.cs
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.CoreCompileInputs.cache
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\AccelerationGun.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\blueTile.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\floor.jpg
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\grid.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke test.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\Scene1.json
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shoot.wav
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun_emission.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\TextAtlas.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\tile.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\uv_grid.jpg
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\VainstainsIconHD.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.mtl
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.obj
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Resources\white.png
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\lighting.frag
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.frag
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.vert
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.frag
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.vert
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.deps.json
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.dll
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\ref\VainEngine.dll
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.pdb
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.AssemblyReference.cache
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.dll
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\ref\VainEngine.dll
+C:\Users\AspinwDB25\OneDrive - Prince William County Public Schools\code projects\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.pdb
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.Properties.Resources.resources
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.GenerateResource.cache
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfoInputs.cache
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.AssemblyInfo.cs
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.CoreCompileInputs.cache
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\AccelerationGun.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\blueTile.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\box.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\capsule.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\floor.jpg
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\grid.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\Milk.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\Milk.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke test.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\monke.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\plane.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\Scene1.json
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shoot.wav
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\ShootGun.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\shootgun_emission.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\sphere.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\testGun.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\TextAtlas.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\tile.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\uv_grid.jpg
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\VainstainsIconHD.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.mtl
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\weeeee.obj
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Resources\white.png
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\lighting.frag
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.frag
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\shader.vert
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.frag
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\Shaders\text.vert
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.deps.json
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.dll
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\ref\VainEngine.dll
+D:\VS\GameEngine\GameEngine\bin\Debug\net5.0\VainEngine.pdb
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.dll
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\ref\VainEngine.dll
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.pdb
+D:\VS\GameEngine\GameEngine\obj\Debug\net5.0\VainEngine.csproj.AssemblyReference.cache
