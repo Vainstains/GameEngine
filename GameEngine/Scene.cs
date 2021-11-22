@@ -82,12 +82,12 @@ namespace VainEngine
                 Root sceneRoot = JsonConvert.DeserializeObject<Root>(scene.sceneData);
                 foreach (Box b in sceneRoot.Scene.Boxes)
                 {
-                    GameObject box = GameObject.Primitives.Box(float.Parse(b.scale) * 2);
+                    GameObject box = GameObject.Primitives.Box(float.Parse(b.scale) * 0.25f);
                     box.scale = float.Parse(b.scale);
                     box.position = new Vector3(float.Parse(b.x), float.Parse(b.y), float.Parse(b.z));
                     box.eulerRot = new Vector3(float.Parse(b.rot1), float.Parse(b.rot2), 0);
                     box.collider = new Collider(new BoxShape(new JVector(float.Parse(b.scale))), box, new Vector3(float.Parse(b.rot1), float.Parse(b.rot2), 0));
-                    box.viewMesh.SetTexture(Texture.LoadFromFile(@"Resources\tile.png"));
+                    box.viewMesh.SetTexture(Texture.LoadFromFile(@"Resources\floor.jpg"));
                     box.viewMesh.color = new Color4(float.Parse(b.r)/255, float.Parse(b.g)/255, float.Parse(b.b)/255, 1);
                 }
             }

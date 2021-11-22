@@ -226,11 +226,11 @@ namespace VainEngine
             _lightingShader.SetMatrix4("projection", Camera.projection);
             _lightingShader.SetVector3("lightColor", new Vector3(1f, 1f, 1.0f));
             _lightingShader.SetVector3("ambientColor", new Vector3(1.4f, 1.6f, 2.0f));
-            _lightingShader.SetFloat("lightPower", 2f);
+            _lightingShader.SetFloat("lightPower", 1.4f);
             _lightingShader.SetFloat("ambientPower", 1f);
             _lightingShader.SetFloat("fogStart", Window.FogStart);
             _lightingShader.SetFloat("fogEnd", Window.FogEnd);
-            _lightingShader.SetFloat("shininess", 100f);
+            _lightingShader.SetFloat("shininess", 2f);
             _lightingShader.SetFloat("emission", emission);
             _lightingShader.SetVector3("lightPos", Window.sunPos*coordFix);
             _lightingShader.SetVector3("viewPos", Camera.pos * coordFix);

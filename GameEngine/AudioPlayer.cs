@@ -60,10 +60,9 @@ namespace VainEngine.Audio
     }
     public class AudioClip
     {
-        public float volume = 1;
         public float[] AudioData { get; private set; }
         public WaveFormat WaveFormat { get; private set; }
-        public AudioClip(string audioFileName)
+        public AudioClip(string audioFileName, float volume)
         {
             using (var audioFileReader = new AudioFileReader(audioFileName) { Volume=volume})
             {
