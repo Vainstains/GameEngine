@@ -1310,35 +1310,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dbasp\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\AspinwDB25\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS\\GameEngine\\GameEngine\\VainEngine.csproj",
+      "projectUniqueName": "C:\\Users\\AspinwDB25\\Source\\Repos\\Vainstains\\GameEngine\\GameEngine\\VainEngine.csproj",
       "projectName": "VainEngine",
-      "projectPath": "D:\\VS\\GameEngine\\GameEngine\\VainEngine.csproj",
-      "packagesPath": "C:\\Users\\dbasp\\.nuget\\packages\\",
-      "outputPath": "D:\\VS\\GameEngine\\GameEngine\\obj\\",
+      "projectPath": "C:\\Users\\AspinwDB25\\Source\\Repos\\Vainstains\\GameEngine\\GameEngine\\VainEngine.csproj",
+      "packagesPath": "C:\\Users\\AspinwDB25\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AspinwDB25\\Source\\Repos\\Vainstains\\GameEngine\\GameEngine\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dbasp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\AspinwDB25\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\dbasp\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

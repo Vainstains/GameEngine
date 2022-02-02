@@ -9,34 +9,64 @@ namespace GridBeatz
 {
     class Program : GameLogic
     {
-        public static string levelPath;
+        public static string levelPath, soundPath;
         public static VainEngine.Window w;
+        public static BeatMapData.Root map;
+        public static float BPM;
         static void Main(string[] args)
         {
-            //Console.WriteLine("Please drag in any beat saber 'Info.dat'");
+            Console.WriteLine("Please drag in any beat saber 'Info.dat'");
 
-            //levelPath = Console.ReadLine().Trim('"');
-            w = VainEngine.Window.Create(1250, 800, "Grid Beatz");
+            levelPath = Console.ReadLine().Trim('"');
+            BeatInfoData.Root mapInfo = MapInfo(levelPath);
+            List<BeatInfoData.DifficultyBeatmapSet> diffsets = mapInfo._difficultyBeatmapSets;
+            List<BeatInfoData.DifficultyBeatmap> difficultyBeatmaps = mapInfo._difficultyBeatmapSets[0]._difficultyBeatmaps;
+
+            Console.WriteLine("Found the following difficulty maps:");
+            Console.WriteLine();
+
+            for (int i = 0; i < difficultyBeatmaps.Count; i++)
+            {
+                BeatInfoData.DifficultyBeatmap d1 = difficultyBeatmaps[i];
+                if(d1._customData != null)
+                    Console.WriteLine($"{i}: {d1._customData._difficultyLabel} ({d1._difficulty})");
+                else
+                    Console.WriteLine($"{i}: {d1._difficulty}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Please type the number next to the difficulty you would like to play.");
+            int.TryParse(Console.ReadLine(), out int selected);
+
+            string fileName = difficultyBeatmaps[selected]._beatmapFilename;
+            FileInfo d = new FileInfo(levelPath);
+            var parent = d.Directory.FullName + "\\" + fileName;
+            map = BeatMap(parent);
+            BPM = (float)mapInfo._beatsPerMinute;
+            soundPath = d.Directory.FullName + "\\" + mapInfo._songFilename;
+
+
+            w = VainEngine.Window.Create(800, 600, "Grid Beatz");
             w.Setup(new Program());
             
             w.Run();
-
         }
         public override void Start()
         {
             base.Start();
             w.ReleaseMouse();
             Global.SkyColor(new OpenTK.Mathematics.Color4(40, 40, 45, 255));
-            GameObject plane = GameObject.Primitives.Plane(0);
             Camera.up = -OpenTK.Mathematics.Vector3.UnitY;
-            
-            BeatMapPlayer.PlayBeatmap(BeatMap(@"C:\Users\dbasp\OneDrive\Desktop\YeetSaberLevelPlaylist\1fc8f (THE MUZZLE FACING - Timbo)\EasyStandard.dat"), 213, @"C:\Users\dbasp\OneDrive\Desktop\YeetSaberLevelPlaylist\1fc8f (THE MUZZLE FACING - Timbo)\FurryUWU.egg");
+            //fps = new UIText();
+            BeatMapPlayer.PlayBeatmap(map, BPM, soundPath);
 
         }
+        UIText fps;
         public override void Update()
         {
             base.Update();
-            Graphics.DrawLine(Camera.pos + Camera.front, OpenTK.Mathematics.Vector3.Zero, OpenTK.Mathematics.Color4.Red);
+            //fps.size = 1.5f;
+            //fps.position = new OpenTK.Mathematics.Vector2(-1, 0.8f);
+            //fps.SetText("fps:"+(1 / frameTime).ToString());
         }
 
         public static BeatInfoData.Root MapInfo(string path)
@@ -61,7 +91,7 @@ namespace GridBeatz
 
         public class CustomData
         {
-            public int _time { get; set; }
+            public double _time { get; set; }
             public List<object> _BPMChanges { get; set; }
             public List<Bookmark> _bookmarks { get; set; }
         }
@@ -132,8 +162,8 @@ namespace GridBeatz
             public List<Contributor> _contributors { get; set; }
             public Editors _editors { get; set; }
             public string _difficultyLabel { get; set; }
-            public int _editorOffset { get; set; }
-            public int _editorOldOffset { get; set; }
+            public double _editorOffset { get; set; }
+            public double _editorOldOffset { get; set; }
             public List<object> _warnings { get; set; }
             public List<object> _information { get; set; }
             public List<object> _suggestions { get; set; }
@@ -163,15 +193,15 @@ namespace GridBeatz
             public string _songSubName { get; set; }
             public string _songAuthorName { get; set; }
             public string _levelAuthorName { get; set; }
-            public int _beatsPerMinute { get; set; }
-            public int _shuffle { get; set; }
+            public double _beatsPerMinute { get; set; }
+            public double _shuffle { get; set; }
             public double _shufflePeriod { get; set; }
             public double _previewStartTime { get; set; }
             public double _previewDuration { get; set; }
             public string _songFilename { get; set; }
             public string _coverImageFilename { get; set; }
             public string _environmentName { get; set; }
-            public int _songTimeOffset { get; set; }
+            public double _songTimeOffset { get; set; }
             public CustomData _customData { get; set; }
             public List<DifficultyBeatmapSet> _difficultyBeatmapSets { get; set; }
         }

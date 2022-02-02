@@ -122,8 +122,9 @@ namespace VainEngine
         {
             for (int i = 0; i < GameObject.objects.Count; i++)
             {
-                foreach (var c in GameObject.objects[i].components)
+                for (int i1 = 0; i1 < GameObject.objects[i].components.Count; i1++)
                 {
+                    Component c = GameObject.objects[i].components[i1];
                     c.End();
                 }
             }

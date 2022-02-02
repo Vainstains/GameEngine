@@ -14,7 +14,7 @@ namespace GridBeatz
         public float BPM;
         public string musicPath;
         int noteCap = 0;
-        UIBox judgementLine = new UIBox(0.4f, 0.01f, Texture.LoadFromFile(@"Resources\white.png"));
+        //UIBox judgementLine = new UIBox(0.4f, 0.01f, Texture.LoadFromFile(@"Resources\white.png"));
         public override void Start()
         {
             base.Start();
@@ -24,16 +24,19 @@ namespace GridBeatz
             Camera.fov = 70;
             scoreText.position.X = -1;
             scoreText.position.Y = 1;
-            judgementLine.position.X = 0.7f;
-            judgementLine.RebuildMesh();
+            //judgementLine.position.X = 0.7f;
+            //judgementLine.RebuildMesh();
             PlayAudio();
+            Program.w.ReleaseMouse();
+            scoreText.size = 4;
+            scoreText.SetText(score.ToString());
         }
         DateTime start;
         Keys[][] keyGrid = 
         new Keys[3][]{ 
-            new Keys[4]{ Keys.Q, Keys.W, Keys.E, Keys.R },
+            new Keys[4]{ Keys.Z, Keys.X, Keys.C, Keys.V },
             new Keys[4]{ Keys.A, Keys.S, Keys.D, Keys.F },
-            new Keys[4]{ Keys.Z, Keys.X, Keys.C, Keys.V } 
+            new Keys[4]{ Keys.Q, Keys.W, Keys.E, Keys.R } 
         };
         public override void Update()
         {
@@ -43,7 +46,7 @@ namespace GridBeatz
                 for (int i = noteCap; i < mapData._notes.Count; i++)
                 {
                     var note = mapData._notes[i];
-                    if (time > (((note._time - 20f) * 60) / BPM))
+                    if (time > (((note._time - 8f) * 60) / BPM))
                     {
                         noteCap++;
                         if (note._type == 3)
@@ -55,8 +58,8 @@ namespace GridBeatz
                         noteComponent.assignedKey = keyGrid[note._lineLayer][note._lineIndex];
                         noteComponent.targetTime = (float)note._time;
                         noteComponent.conductor = this;
-                        n.viewMesh = new Mesh("Resources/box.obj", Texture.LoadFromFile("Resources/white.png"));
-                        n.scale = 0.4f;
+                        n.viewMesh = new Mesh("Resources/sphere.obj", Texture.LoadFromFile("Resources/white.png"));
+                        n.scale = 0.3f;
                         n.viewMesh.emission = 1;
                     }
                 }
@@ -65,7 +68,10 @@ namespace GridBeatz
             {
                 start = DateTime.Now;
             }
-            scoreText.size = 4;
+            
+        }
+        public void UpdateScore()
+        {
             scoreText.SetText(score.ToString());
         }
         bool audioPlaying = false;
