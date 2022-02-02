@@ -1,4 +1,4 @@
 # VainEngine
- This is a game engine used for small games or medium sized games.
+This is a game engine used for small games or medium sized games.
  
-Getting Started: [(GameEngine/Docs/Tutorial/GettingStarted.md)]
+Getting Started: [Docs](GameEngine/Docs/Tutorial/GettingStarted.md)
