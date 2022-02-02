@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VainEngine", "GameEngine\Va
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KarlGL", "game\KarlGL.csproj", "{A03D4622-1972-4795-916B-C838DCE9A543}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridBeatz", "GridBeatz\GridBeatz.csproj", "{56F39DC2-5D85-44D4-85D4-04632B24CA3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A03D4622-1972-4795-916B-C838DCE9A543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03D4622-1972-4795-916B-C838DCE9A543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03D4622-1972-4795-916B-C838DCE9A543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F39DC2-5D85-44D4-85D4-04632B24CA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F39DC2-5D85-44D4-85D4-04632B24CA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F39DC2-5D85-44D4-85D4-04632B24CA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F39DC2-5D85-44D4-85D4-04632B24CA3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

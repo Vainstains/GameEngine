@@ -5,7 +5,17 @@
       "ProjectGuid": "836bfb13-d946-471b-b159-796e34b93d4e",
       "DisplayName": "VainEngine",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "a03d4622-1972-4795-916b-c838dce9a543": {
+      "ProjectGuid": "a03d4622-1972-4795-916b-c838dce9a543",
+      "DisplayName": "KarlGL",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

@@ -14,28 +14,14 @@ namespace VainEngine
         {
             get
             {
-                if (height < cellHeight)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return (int)MathF.Floor((float)width / (float)cellWidth);
-                }
+                return width / cellWidth;
             }
         }
         public int numCellsY
         {
             get
             {
-                if (width < cellWidth)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return (int)MathF.Floor((float)height / (float)cellHeight);
-                }
+                return height / cellHeight;
             }
         }
         public Texture texture;
@@ -52,10 +38,10 @@ namespace VainEngine
             int x = cell % numCellsX;
             int y = (cell / numCellsX) % numCellsY;
             TexRect tr = new TexRect();
-            tr.topLeft = new Vector2(((x * cellWidth)) / width, ((y * cellHeight)) / height);
-            tr.topRight = new Vector2(((x * cellWidth) + cellWidth) / width, ((y * cellHeight)) / height);
-            tr.bottomLeft = new Vector2(((x * cellWidth)) / width, ((y * cellHeight) + cellHeight) / height);
-            tr.bottomRight = new Vector2(((x * cellWidth) + cellWidth) / width, ((y * cellHeight) + cellHeight) / height);
+            tr.topLeft = new Vector2((((float)x * cellWidth)) / width, 1-((((float)y * cellHeight)) / height));
+            tr.topRight = new Vector2((((float)x * cellWidth) + cellWidth) / width, 1 - ((((float)y * cellHeight)) / height));
+            tr.bottomLeft = new Vector2((((float)x * cellWidth)) / width, 1 - ((((float)y * cellHeight) + cellHeight) / height));
+            tr.bottomRight = new Vector2((((float)x * cellWidth) + cellWidth) / width, 1 - ((((float)y * cellHeight) + cellHeight) / height));
             return tr;
         }
         public struct TexRect 

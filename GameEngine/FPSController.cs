@@ -37,10 +37,15 @@ namespace VainEngine
         {
             rb.ApplyImpulse(new Jitter.LinearMath.JVector(acc.X, acc.Y, acc.Z) * 0.01f * impulse);
         }
+        GameObject follower;
         public FPSController(float height)
         {
+            follower = new GameObject();
+            follower.viewMesh = new Mesh(@"Resources\capsule.obj", Texture.LoadFromFile(@"Resources\grid.png"));
+            follower.visible = true;
+            follower.viewMesh.scale = 1;
             this.height = height;
-            CapsuleShape body = new CapsuleShape(Math.Clamp((height)-2f, 0, 5), 1f);
+            CapsuleShape body = new CapsuleShape(Math.Clamp((height)-6f, 0, 5), 3f);
             rb = new RigidBody(body);
             rb.Material.KineticFriction = -0.2f;
             rb.Material.StaticFriction = -0.2f;
@@ -60,15 +65,16 @@ namespace VainEngine
             rb.Orientation = Jitter.LinearMath.JMatrix.Identity;
             rb.AngularVelocity = JVector.Zero;
             position = new Vector3(rb.Position.X, rb.Position.Y + (height / 2), rb.Position.Z);
-            camImpact = Lerp(camImpact, rb.LinearVelocity.Y, frametime * 2);
+            follower.position = position;
+            camImpact = Lerp(camImpact, 0, frametime * 10);
             Console.WriteLine(velocity);
-            if (rb.LinearVelocity.Y < 0)
+            if (rb.LinearVelocity.Y < -0.05)
             {
                 grounded = false;
             }
             if (grounded)
             {
-                rb.AddForce(new JVector(0, -5, 0));
+                rb.AddForce(new JVector(0, 0, 0));
             }
             if (pos.X == float.NaN || pos.Y == float.NaN || pos.Z == float.NaN)
                 pos = Vector3.Zero;
@@ -81,7 +87,7 @@ namespace VainEngine
         public Vector3 gunPos;
 
         bool wasGrounded = false;
-        float airMovement = 0.8f, gndMovement = 7f, jumpPower = 15f, wallJumpPower = 12;
+        float airMovement = 1.5f, gndMovement = 6f, jumpPower = 16f, wallJumpPower = 18;
         float gunKnockbackOffset = 0;
         bool wasCrouching;
         float shootCooldown = 0;
@@ -90,6 +96,7 @@ namespace VainEngine
         {
             if(body1 == rb && Vector3.Dot(new Vector3(normal.X, normal.Y, normal.Z), Vector3.UnitY) > 0.8f)
             {
+
                 grounded = true;
                 wall = false;
             }
@@ -106,24 +113,31 @@ namespace VainEngine
                 //wallRunPos = new JVector(pos.X, pos.Y, pos.Z);
                 targetCamUp = (new Vector3(normal.X, -normal.Y, normal.Z)/2.5f) + -Vector3.UnitY;
                 rb.LinearVelocity = new JVector(rb.LinearVelocity.X/(1+frametime), rb.LinearVelocity.Y / (1 + frametime), rb.LinearVelocity.Z / (1 + frametime));
-                rb.AddForce(new JVector(normal.X*2, normal.Y*2, normal.Z*2));
+                rb.AddForce(new JVector(-normal.X*8, -normal.Y*8, -normal.Z*8));
                 rb.AddForce(new JVector(0,5,0));
+                //rb.Position -= new JVector(normal.X/90, normal.Y / 90, normal.Z / 90);
                 if (jumping)
                 {
                     rb.LinearVelocity = new JVector(rb.LinearVelocity.X, 13, rb.LinearVelocity.Z) + new JVector(normal.X * wallJumpPower, normal.Y * wallJumpPower, normal.Z * wallJumpPower);
+                    rb.Position += new JVector(normal.X * (penetration + 0.01f), normal.Y * (penetration + 0.01f), normal.Z * (penetration + 0.01f));
                     wall = false;
                 }
                     
           
             }
         }
-        public bool debugMode = false;
+        public bool debugMode = false, debugAllowed = false;
         public void Movement(KeyboardState keyboard, MouseState mouse,float frameTime)
         {
-            Camera.fov = debugMode?90:75;
+            Camera.fov = debugMode?90:85;
             if (debugMode)
+            {
                 rb.LinearVelocity = JVector.Zero;
-            if (keyboard.IsKeyDown(Keys.F1) && !keyboard.WasKeyDown(Keys.F1))
+                grounded = true;
+                wasGrounded = true;
+            }
+
+            if (keyboard.IsKeyDown(Keys.F) && !keyboard.WasKeyDown(Keys.F) && debugAllowed)
                 debugMode = !debugMode;
             
             bool crouching = keyboard.IsKeyDown(Keys.LeftControl) || keyboard.IsKeyDown(Keys.LeftShift);
@@ -131,8 +145,8 @@ namespace VainEngine
 
             if (!debugMode)
             {
-
-
+                if (velocity.X == float.NaN || velocity.Y == float.NaN || velocity.Z == float.NaN || position.X == float.NaN || position.Y == float.NaN || position.Z == float.NaN)
+                    SceneManagement.SceneManager.Reload();
                 
 
                 if (crouching)
@@ -171,14 +185,19 @@ namespace VainEngine
                 }
                 else if (!grounded)
                 {
+                    Vector3 widhDir = Vector3.Zero;
                     if (keyboard.IsKeyDown(Keys.W))
-                        AddAcceleration(localfwd(airMovement) * -(-1.2f + Vector3.Dot(localfwd(airMovement).Normalized(), velocity.Normalized())) / (0.6f + (localfwd(airMovement).Xz.LengthFast) / 2));
+                        widhDir += localfwd(1);
                     if (keyboard.IsKeyDown(Keys.S))
-                        AddAcceleration(localfwd(-airMovement) * -(-1.2f + Vector3.Dot(localfwd(-airMovement).Normalized(), velocity.Normalized())) / (0.6f + (localfwd(airMovement).Xz.LengthFast) / 2));
+                        widhDir += localfwd(-1);
                     if (keyboard.IsKeyDown(Keys.A))
-                        AddAcceleration(localrht(-airMovement) * -(-1.2f + Vector3.Dot(localrht(-airMovement).Normalized(), velocity.Normalized())) / (0.6f + (localfwd(airMovement).Xz.LengthFast) / 2));
+                        widhDir += localrht(-1);
                     if (keyboard.IsKeyDown(Keys.D))
-                        AddAcceleration(localrht(airMovement) * -(-1.2f + Vector3.Dot(localrht(airMovement).Normalized(), velocity.Normalized())) / (0.6f + (localfwd(airMovement).Xz.LengthFast) / 2));
+                        widhDir += localrht(1);
+                    widhDir.NormalizeFast();
+                    Vector3 mov = velocity;
+                    mov.Y = 0;
+                    AddAcceleration((widhDir * (1f-(Vector3.Dot(widhDir, mov.Normalized())*0.9f)))+(widhDir/(0.5f+(mov.LengthFast))));
                 }
                 if (grounded)
                 {
@@ -211,24 +230,25 @@ namespace VainEngine
             else
             {
                 if (jumping)
-                    rb.Position += new JVector(0, frameTime*3, 0);
+                    rb.Position += new JVector(0, frameTime*7, 0);
                 if(crouching)
-                    rb.Position += new JVector(0, -frameTime*3, 0);
+                    rb.Position += new JVector(0, -frameTime*7, 0);
                 if (keyboard.IsKeyDown(Keys.W))
-                    rb.Position += Jlocalfwd(10 * frameTime);
+                    rb.Position += Jlocalfwd(7 * frameTime);
                 if (keyboard.IsKeyDown(Keys.S))
-                    rb.Position -= Jlocalfwd(10 * frameTime);
+                    rb.Position -= Jlocalfwd(7 * frameTime);
                 if (keyboard.IsKeyDown(Keys.A))
-                    rb.Position -= Jlocalrht(10 * frameTime);
+                    rb.Position -= Jlocalrht(7 * frameTime);
                 if (keyboard.IsKeyDown(Keys.D))
-                    rb.Position += Jlocalrht(10 * frameTime);
+                    rb.Position += Jlocalrht(7 * frameTime);
             }
             Camera.euler.X = Math.Clamp(Camera.euler.X, -85, 85);
 
             camOffsetFollow = Vector3.Lerp(camOffsetFollow, camOffset, frameTime * 8);
             camOffset = Vector3.Lerp(camOffset, new Vector3(0, -0.25f, 0), frameTime * 10);
-
-            wasGrounded = grounded;
+            if (grounded && !wasGrounded)
+                camImpact = -20;
+                wasGrounded = grounded;
             wasCrouching = crouching;
             
         }

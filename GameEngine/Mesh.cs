@@ -210,6 +210,9 @@ namespace VainEngine
         }
         Vector3 coordFix = new Vector3(1, -1, 1);
         public float emission = 0.2f;
+        internal Matrix4 rotMatrix;
+        internal bool useRotMatrix;
+
         public void Draw()
         {
             GL.BindVertexArray(_vao);
@@ -217,33 +220,49 @@ namespace VainEngine
             _texture.Use(TextureUnit.Texture0);
             _emissionMap.Use(TextureUnit.Texture1);
 
-
-            // Finally, we have the model matrix. This determines the position of the model.
-            var model = Matrix4.Identity * Matrix4.CreateRotationX((float)MathHelper.DegreesToRadians(180 - euler.X)) * Matrix4.CreateRotationZ((float)MathHelper.DegreesToRadians(euler.Z)) * Matrix4.CreateRotationY((float)MathHelper.DegreesToRadians(euler.Y)) * Matrix4.CreateScale(scale) * Matrix4.CreateTranslation(position);
-
+            Matrix4 model;
+            if(!useRotMatrix)
+                model = Matrix4.Identity * Matrix4.CreateRotationX((float)MathHelper.DegreesToRadians(180 - euler.X)) * Matrix4.CreateRotationZ((float)MathHelper.DegreesToRadians(euler.Z)) * Matrix4.CreateRotationY((float)MathHelper.DegreesToRadians(euler.Y)) * Matrix4.CreateScale(scale) * Matrix4.CreateTranslation(position);
+            else
+                model = Matrix4.Identity * rotMatrix * Matrix4.CreateScale(scale) * Matrix4.CreateTranslation(position);
             _lightingShader.SetMatrix4("model", model);
             _lightingShader.SetMatrix4("view", Camera.view);
+            _lightingShader.SetFloat("orthographic", Camera.orthographic?1:0);
             _lightingShader.SetMatrix4("projection", Camera.projection);
             _lightingShader.SetVector3("lightColor", new Vector3(1f, 1f, 1.0f));
-            _lightingShader.SetVector3("ambientColor", new Vector3(1.4f, 1.6f, 2.0f));
-            _lightingShader.SetFloat("lightPower", 1.4f);
-            _lightingShader.SetFloat("ambientPower", 1f);
+            _lightingShader.SetVector3("ambientColor", new Vector3(Global.ambient.R, Global.ambient.G, Global.ambient.B));
+            _lightingShader.SetVector3("skyColor", new Vector3(Global.ambient.R/2, Global.ambient.G/2, Global.ambient.B/2));
+            _lightingShader.SetFloat("lightPower", 1f);
+            _lightingShader.SetFloat("ambientPower", 3f);
             _lightingShader.SetFloat("fogStart", Window.FogStart);
             _lightingShader.SetFloat("fogEnd", Window.FogEnd);
             _lightingShader.SetFloat("shininess", 2f);
             _lightingShader.SetFloat("emission", emission);
             _lightingShader.SetVector3("lightPos", Window.sunPos*coordFix);
             _lightingShader.SetVector3("viewPos", Camera.pos * coordFix);
+            _lightingShader.SetVector3("camViewDir", Camera.front * coordFix);
             _lightingShader.SetVector3("color", new Vector3(color.R/ 10, color.G / 10, color.B / 10));
-
+            for (int i = 0; i < Light.lights.Count; i++)
+            {
+                _lightingShader.SetVector3($"pointLights[{i}].position", Light.lights[i].position);
+                _lightingShader.SetVector3($"pointLights[{i}].ambient", new Vector3(0.05f, 0.05f, 0.05f));
+                _lightingShader.SetVector3($"pointLights[{i}].diffuse", ((Vector4)Light.lights[i].color).Xyz);
+                _lightingShader.SetVector3($"pointLights[{i}].specular", new Vector3(Light.lights[i].specular));
+                _lightingShader.SetFloat($"pointLights[{i}].constant", 1.5f);
+                _lightingShader.SetFloat($"pointLights[{i}].linear", 0.3f);
+                _lightingShader.SetFloat($"pointLights[{i}].quadratic", 0.052f);
+                _lightingShader.SetFloat($"pointLights[{i}].power", Light.lights[i].power);
+                _lightingShader.SetFloat($"pointLights[{i}].radius", Light.lights[i].distance);
+            }
+            _lightingShader.SetInt("numLights", Light.lights.Count);
             Matrix4 lampMatrix = Matrix4.CreateScale(0.2f);
             lampMatrix = lampMatrix * Matrix4.CreateTranslation(_lightPos);
             _lampShader.SetMatrix4("model", lampMatrix);
             _lampShader.SetMatrix4("view", Camera.view);
+            _lightingShader.SetFloat("orthographic", Camera.orthographic ? 1 : 0);
             _lampShader.SetMatrix4("projection", Camera.projection);
             _lampShader.SetVector3("color", new Vector3(color.R / 10, color.G / 10, color.B / 10));
             _lightingShader.Use();
-
             GL.DrawElements(PrimitiveType.Triangles, _indices.Length, DrawElementsType.UnsignedInt, 0);
         }
     }
