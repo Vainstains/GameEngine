@@ -20,8 +20,8 @@ namespace GridBeatz
             base.Start();
             
             Camera.euler = new OpenTK.Mathematics.Vector3(0, -90, 0);
-            Camera.pos = new OpenTK.Mathematics.Vector3(0, 1, -2);
-            Camera.fov = 70;
+            Camera.pos = new OpenTK.Mathematics.Vector3(0, 1, -5);
+            Camera.fov = 55;
             scoreText.position.X = -1;
             scoreText.position.Y = 1;
             //judgementLine.position.X = 0.7f;

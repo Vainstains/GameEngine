@@ -13,6 +13,7 @@ namespace GridBeatz
         public static VainEngine.Window w;
         public static BeatMapData.Root map;
         public static float BPM;
+        public static float offset;
         static void Main(string[] args)
         {
             Console.WriteLine("Please drag in any beat saber 'Info.dat'");
@@ -36,7 +37,7 @@ namespace GridBeatz
             Console.WriteLine();
             Console.WriteLine("Please type the number next to the difficulty you would like to play.");
             int.TryParse(Console.ReadLine(), out int selected);
-
+            offset = (float)difficultyBeatmaps[selected]._noteJumpStartBeatOffset;
             string fileName = difficultyBeatmaps[selected]._beatmapFilename;
             FileInfo d = new FileInfo(levelPath);
             var parent = d.Directory.FullName + "\\" + fileName;
@@ -45,7 +46,7 @@ namespace GridBeatz
             soundPath = d.Directory.FullName + "\\" + mapInfo._songFilename;
 
 
-            w = VainEngine.Window.Create(800, 600, "Grid Beatz");
+            w = VainEngine.Window.Create(1000,720,  "Grid Beatz (I bought the entire keyboard, ima use the entire keyboard)");
             w.Setup(new Program());
             
             w.Run();
@@ -54,7 +55,7 @@ namespace GridBeatz
         {
             base.Start();
             w.ReleaseMouse();
-            Global.SkyColor(new OpenTK.Mathematics.Color4(40, 40, 45, 255));
+            Global.SkyColor(new OpenTK.Mathematics.Color4(15, 15, 23, 255));
             Camera.up = -OpenTK.Mathematics.Vector3.UnitY;
             //fps = new UIText();
             BeatMapPlayer.PlayBeatmap(map, BPM, soundPath);
