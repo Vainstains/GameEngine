@@ -1,11 +1,11 @@
 ﻿# Getting Started
 
 To start, put a using block at the top of your main code file (Program.cs in my case).
-```
+```C#
 using VainEngine;
 ```
 then, in the entry point method, where you want the game to start, put the following lines:
-```
+```C#
 //Create the window. Syntax is width, height, then window title
 var w = VainEngine.Window.Create(1000, 720,  "[name of your game or project]");
 
