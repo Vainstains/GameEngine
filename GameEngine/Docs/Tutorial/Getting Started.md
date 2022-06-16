@@ -30,7 +30,7 @@ To display things in VainEngine, you must configure the camera. VainEngine is a 
 
 The camera uses a "position, euler, up" system. First the position is set, then the euler angles are converted to a direction vector reperesenting the camera's forward direction. then it uses the up direction combined with the forward direction to set the orientation.
 
-__IMPORTANT: VainEngine uses a vertically flipped coordinate system. This means that (1,2,3) in Unity, would be (1,-2,3) in VainEngine.__
+__IMPORTANT: VainEngine uses a vertically flipped coordinate system. This means that (1,2,3) in Unity, would be (1,-2,3) in VainEngine. this is mainly because early in development i screwed up some stuff and forgot to add proper coordinate systems, so this means that if you also want to use a physics library, you could flip the y-coordinate when setting a meshe's position or just set gravity to negative.__
 
 To make the camera look forward from (0,0,0), just type the following in any *game logic method\**:
 ```C#
@@ -57,3 +57,4 @@ To use a mesh and assign it, type:
 Mesh m = new Mesh(@"Resources\yourObj.obj", Texture.LoadFromFile(@"Resources\yourTexture.whatever"))
 g.viewMesh = m;
 ```
+if you are creating many meshes on the fly, such as shaped particles, you may want to cache the mesh and texture using a global object and a list or something.
