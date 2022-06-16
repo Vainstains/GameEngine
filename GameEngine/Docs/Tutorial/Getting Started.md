@@ -25,6 +25,8 @@ w.Run();
 ```
 A window for the game should appear.
 
+Once you have your game window up, you might want to build a scene or get input or any of that. to control anything inside the game, you must type the code for it in the Start() method of your main program that gets taken from the GameLogic class. to use Start() or Update(), just override them in the main class.
+
 ## Camera
 To display things in VainEngine, you must configure the camera. VainEngine is a 3D engine, but you can emulate 2D by setting the camera to orthographic mode and using rotated planes as sprites.(you COULD use the UIBox class, but it is slightly more expensive and you have no control over the draw order.)
 
